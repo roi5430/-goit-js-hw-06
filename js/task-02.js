@@ -18,13 +18,15 @@ const ingredients = [
 
 const ingredientsList = document.querySelector("ul#ingredients");
 
+const newList = [];
+
 ingredients.map((ingredient) => {
 
   const newElementLiEl = document.createElement('li');
   newElementLiEl.textContent = ingredient;
   newElementLiEl.classList.add('item');
-  ingredientsList.append(newElementLiEl);
-
+  return newList.push(newElementLiEl);
 });
 
+ingredientsList.append(...newList);
 console.log(ingredientsList);

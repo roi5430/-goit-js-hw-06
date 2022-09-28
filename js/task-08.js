@@ -24,12 +24,16 @@ function onSubmit(evt) {
     const {email, password} = evt.currentTarget.elements; 
     const userData = {
         email: email.value,
-        password: password.value}
+        password: password.value
+    };
+    if (userData.email !== '' && userData.password !== '') {
+        console.log(userData);
+        document.querySelector('.login-form').reset();
     
-    if (userData.email === '' || userData.password === '') {
-        alert('Заповніть, будь ласка, всі поля')
+    } else {
+      alert('Заповніть, будь ласка, всі поля')  
     }
-    console.log(userData);
+   
 
-    document.querySelector('.login-form').reset();
+    
 }

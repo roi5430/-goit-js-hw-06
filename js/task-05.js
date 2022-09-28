@@ -9,6 +9,12 @@ const spanEl = document.querySelector("#name-output");
 console.dir(spanEl)
 inputEl.addEventListener('input', handlerInput);
 function handlerInput(evt) {
-   spanEl.textContent = evt.currentTarget.value;
+   
+    spanEl.textContent = evt.currentTarget.value;
+    
+    if (evt.currentTarget.value === "") {
+        spanEl.textContent = "Anonymous";
+    }
+   
     console.log(evt);
 }

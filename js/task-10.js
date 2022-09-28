@@ -40,7 +40,7 @@ function createBoxes(amount) {
   amount = input.value;
   
   const box = document.createElement('div')
-  box.classList.add('box')
+  box.classList.add('box');
   box.style.backgroundColor = getRandomHexColor();
   sizeBox += 10;
   box.style.width = sizeBox + 'px';

@@ -5,12 +5,14 @@
 
 const input = document.querySelector('input#font-size-control');
 const magic = document.querySelector('span#text');
-let value = 16;
+magic.style.fontSize = 55+"px";
 
+ 
 input.addEventListener('input', onInput);
 function onInput(evt) {
-    value += 1
-    magic.style.fontSize = value + 'px'; 
+    
+    magic.style.fontSize = evt.currentTarget.value + "px"; 
     console.log(evt)
 
 }; 
+
