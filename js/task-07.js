@@ -5,7 +5,9 @@
 
 const input = document.querySelector('input#font-size-control');
 const magic = document.querySelector('span#text');
-magic.style.fontSize = 55+"px";
+const min = parseFloat(input.getAttribute("min"));
+const max = parseFloat(input.getAttribute("max"));
+magic.style.fontSize = ((max-min)/2+min) + "px";
 
  
 input.addEventListener('input', onInput);
